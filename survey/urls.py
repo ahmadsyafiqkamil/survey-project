@@ -8,4 +8,5 @@ from account import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('account.urls')),
+    path('',include('dashboard.urls')),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
