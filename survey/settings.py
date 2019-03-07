@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'account.apps.AccountConfig', #config account
-    'dashboard.apps.DashboardConfig', #config dashboard
+    'analis.apps.AnalisConfig', #config analis
 ]
 
 
@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'survey.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME'  : 'producthunt',
+        'NAME'  : 'survey',
         'USER'  : 'postgres',
         'Password':'root',
         'HOST':'localhost',
