@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
+  <title>Aplikasi Survey</title>
 
   <!-- Global stylesheets -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -18,7 +18,9 @@
 
   <!-- Core JS files -->
   <script type="text/javascript" src="{% static 'assets/js/plugins/loaders/pace.min.js'%}"></script>
-  <script type="text/javascript" src="{% static 'assets/js/core/libraries/jquery.min.js'%}"></script>
+  <!-- <script type="text/javascript" src="{% static 'assets/js/core/libraries/jquery.min.js'%}"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
   <script type="text/javascript" src="{% static 'assets/js/core/libraries/bootstrap.min.js'%}"></script>
   <script type="text/javascript" src="{% static 'assets/js/plugins/loaders/blockui.min.js'%}"></script>
   <script type="text/javascript" src="{% static 'assets/js/plugins/ui/nicescroll.min.js'%}"></script>
@@ -31,7 +33,24 @@
 
   <script type="text/javascript" src="{% static 'assets/js/plugins/ui/ripple.min.js'%}"></script>
   <!-- /theme JS files -->
+  <!-- Surveyjs -->
+  <!-- <link href="https://surveyjs.azureedge.net/1.0.73/survey.css" type="text/css" rel="stylesheet" />
+  <script src="https://surveyjs.azureedge.net/1.0.73/survey.jquery.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-min.js"></script>
+  <script src="https://surveyjs.azureedge.net/0.12.28/survey.ko.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/worker-json.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/mode-json.js" type="text/javascript" charset="utf-8"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+  <link href="https://surveyjs.azureedge.net/0.12.28/surveyeditor.css" type="text/css" rel="stylesheet" />
+  <script src="https://surveyjs.azureedge.net/0.12.28/surveyeditor.js"></script>
 
+<!-- formbuilder  -->
+<!-- <script src="https://formbuilder.online/assets/js/form-builder.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -153,14 +172,14 @@
               <li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
               <li><a href="{%url 'dashboard'%}"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
               <li>
-									<a href="#"><i class="icon-stack2"></i> <span>New Project</span></a>
-									<ul>
-                    <li><a href="#"><i class="glyphicon glyphicon-th"></i>New Organization</a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-th-list"></i>New Tools</a></li>
+                <a href="#"><i class="icon-stack2"></i> <span>New Project</span></a>
+                <ul>
+                  <li><a href="{%url 'organisasi'%}"><i class="glyphicon glyphicon-th"></i>New Organization</a></li>
+                  <li><a href="{%url 'perangkat'%}"><i class="glyphicon glyphicon-th-list"></i>New Tools</a></li>
 
 
-									</ul>
-								</li>
+                </ul>
+              </li>
 
             </ul>
           </li>
